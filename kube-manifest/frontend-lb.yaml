@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service              # 1
+metadata:
+  name: kube-frontend-lb
+spec:
+  type: LoadBalancer       # 2
+  ports:
+  - port: 4000             # 3
+    protocol: TCP          # 4
+    targetPort: 80         # 5
+  selector:                # 6
+    app: kube-frontend     # 7

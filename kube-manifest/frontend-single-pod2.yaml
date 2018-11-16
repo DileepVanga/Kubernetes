@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kube-frontend2
+  labels:
+    app: kube-frontend
+spec:
+  containers:
+    - image: dileep5885/kube-frontend
+      name: kube-frontend
+      ports:
+        - containerPort: 80
